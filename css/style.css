@@ -1,0 +1,82 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+  }
+  
+  /******************************************
+  /* LAYOUT
+  /*******************************************/
+  
+  /* body {
+      padding: 0;
+      margin: 0;  
+  } */
+
+  body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+  }
+
+
+
+  .calculator-grid {
+      display: grid;
+      justify-content: center;
+      align-content: center;
+      /* min-height: 100vh; */
+      grid-template-columns: repeat(4, 100px);
+      grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+      border-radius: 40px;
+      background: black;
+      width: 100%;
+      height: fit-content;
+      margin: auto;
+      padding: 15px;
+  }
+
+  .calculator-grid > button {
+      width: 70px;
+      height: 70px;
+      cursor: pointer;
+      font-size: 3rem;
+      background: white;
+      border-radius: 50%;
+      border: none;
+      text-decoration: none;
+  }
+
+  .output {
+      background: white;
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;  
+      flex-direction: column;
+      /* padding: 10px; */
+      margin: 20px 10px;
+      word-wrap: break-word;
+      word-break: break-all;  
+      width: 90%;
+  }
+
+  .output .previous-operand {
+      color: rgba(111, 111, 111, .75);
+      font-size: 1.5rem;
+  }
+
+  .output .current-operand {
+      font-size: 2.5rem;
+}
+  
+  /******************************************
+  /* ADDITIONAL STYLES
+  /*******************************************/
+  
